@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Maze
 {
-    public class BadBonus : Bonus , IFly, IRotation
+    public class BadBonus : Bonus , IFly, IRotation, IExecute
     {
         private float highFly;
         private float speedRotation;
@@ -21,7 +21,7 @@ namespace Maze
             highFly = Random.Range(1f, 5f);
             speedRotation = Random.Range(13f, 40f);
         }
-        private void Update()
+        public void Update()
         {
             Fly();
             Rotate();

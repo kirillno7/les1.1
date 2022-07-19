@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Maze
 {
-    public class GoodBonus : Bonus
+    public class GoodBonus : Bonus, IExecute
     {
         private float acceleration;
         private Maze.Player player;
@@ -20,7 +20,7 @@ namespace Maze
         {
             _speed = _speed * acceleration;
         }
-        private void Update()
+        public void Update()
         {
             Acceleration();
         }
